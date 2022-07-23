@@ -13,6 +13,7 @@ namespace PesonalPasswordManager
 
             string masterPassword = Console.ReadLine();
 
+            // TODO get from env
             if (masterPassword != "123")
             {
                 Console.WriteLine("Get da fuck outa here bitch! ");
@@ -22,6 +23,7 @@ namespace PesonalPasswordManager
                 Console.WriteLine("Welcome bitch *P");
                 Console.WriteLine("Getting Connection ...");
 
+                // TODO get from env
                 var datasource = @"localhost";
                 var database = "my_passes";
                 var username = "sa"; 
