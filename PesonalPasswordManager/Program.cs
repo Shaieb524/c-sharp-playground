@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Data.SqlClient;
 using PesonalPasswordManager.Helpers;
+using System.Data.SqlClient;
 
 namespace PesonalPasswordManager
 {
