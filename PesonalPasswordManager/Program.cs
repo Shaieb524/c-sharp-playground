@@ -16,7 +16,7 @@ namespace PesonalPasswordManager
             // TODO get from env
             if (masterPassword != "123")
             {
-                Console.WriteLine("Get da fuck outa here bitch! ");
+                Console.WriteLine("Get da fuck outa here bitch ╭∩╮ .|. ");
             }
             else
             {
@@ -38,10 +38,14 @@ namespace PesonalPasswordManager
                     Console.WriteLine("Openning Connection ...");
                     conn.Open();
                     Console.WriteLine("Connection successful!");
+
+
+
                 }
                 catch (Exception e)
                 {
                     Console.WriteLine("Error: " + e.Message);
+                    Environment.Exit(0);
                 }
 
                 var helper = new ConsoleHelper();
@@ -55,11 +59,11 @@ namespace PesonalPasswordManager
                 switch (Purpose)
                 {
                     case "1":
-                        helper.CheckOldPassword();
+                        helper.CheckOldPassword(conn);
                         break;
 
                     case "2":
-                        Console.WriteLine("222");
+                        helper.AddNewServicePassword(conn);
                         break;
 
                     case "3":
