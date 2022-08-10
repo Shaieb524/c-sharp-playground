@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CSharp.ProblemSolving.Helpers.TaksNo1
 {
     public class DisplayHelper
