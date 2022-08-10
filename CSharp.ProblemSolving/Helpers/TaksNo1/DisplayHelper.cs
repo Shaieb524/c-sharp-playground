@@ -31,8 +31,6 @@ namespace CSharp.ProblemSolving.Helpers.TaksNo1
                         int spcaceCounter = 0;
                         for (int i = 0; i < BaseNo + 1; i++)
                         {
-                            int numOfAstrisks = i + 1;
-
                             if (i <= BaseNo / 2)
                                 Console.WriteLine(new string(' ', (BaseNo / 2) - i) + new string('*', i + 1));
                             else
