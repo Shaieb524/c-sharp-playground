@@ -1,0 +1,15 @@
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\bin\Debug\net6.0\TaskNo1.exe
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\bin\Debug\net6.0\TaskNo1.deps.json
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\bin\Debug\net6.0\TaskNo1.runtimeconfig.json
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\bin\Debug\net6.0\TaskNo1.dll
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\bin\Debug\net6.0\TaskNo1.pdb
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\obj\Debug\net6.0\TaskNo1.csproj.AssemblyReference.cache
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\obj\Debug\net6.0\TaskNo1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\obj\Debug\net6.0\TaskNo1.AssemblyInfoInputs.cache
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\obj\Debug\net6.0\TaskNo1.AssemblyInfo.cs
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\obj\Debug\net6.0\TaskNo1.csproj.CoreCompileInputs.cache
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\obj\Debug\net6.0\TaskNo1.dll
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\obj\Debug\net6.0\refint\TaskNo1.dll
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\obj\Debug\net6.0\TaskNo1.pdb
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\obj\Debug\net6.0\TaskNo1.genruntimeconfig.cache
+C:\Users\JoudShaieb(TechUnico\source\repos\TaskNo1\TaskNo1\obj\Debug\net6.0\ref\TaskNo1.dll
