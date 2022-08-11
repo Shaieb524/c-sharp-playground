@@ -1,5 +1,5 @@
 ﻿
-namespace CSharp.ProblemSolving.Helpers.TaksNo1
+namespace CSharp.ProblemSolving.Tasks.TaksNo1
 {
     public class DisplayHelper
     {

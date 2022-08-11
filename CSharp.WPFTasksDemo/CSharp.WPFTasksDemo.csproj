@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Tasks\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CSharp.ProblemSolving\CSharp.ProblemSolving.csproj" />
   </ItemGroup>
 

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CSharp.WPFTasksDemo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="SkyBlue">
         <TextBox 
             AcceptsReturn="True"
             TextWrapping="Wrap"
@@ -18,6 +18,12 @@
             
         </TextBox>
 
+        <Button Margin="166,174,577,214" Click="ButtonOk_Click" RenderTransformOrigin="-1.035,0.378">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Foreground="Blue" FontWeight="Bold" Margin="2,0">Ok</TextBlock>
+            </StackPanel>
+        </Button>
+        
         <Button Margin="242,176,501,213" Click="ButtonRight_Click">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Foreground="Blue" FontWeight="Bold" Margin="2,0">Right</TextBlock>

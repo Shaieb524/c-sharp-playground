@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CSharp.ProblemSolving.Helpers.TaksNo1;
+using CSharp.ProblemSolving.Tasks.TaksNo1;
 
 namespace CSharp.WPFTasksDemo
 {
@@ -24,12 +24,13 @@ namespace CSharp.WPFTasksDemo
         public MainWindow()
         {
             InitializeComponent();
+            PyramidTextArea.Visibility = Visibility.Collapsed;
         }
 
         private void ButtonLeft_Click(object sender, RoutedEventArgs e)
         {
             DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.Text = dh.GetAstriskPyramidString(7, "Left");
+            PyramidTextArea.Text = dh.GetAstriskPyramidString(19, "Left");
 
         }
 
@@ -42,7 +43,7 @@ namespace CSharp.WPFTasksDemo
         private void ButtonRight_Click(object sender, RoutedEventArgs e)
         {
             DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.Text = dh.GetAstriskPyramidString(9, "Right");
+            PyramidTextArea.Text = dh.GetAstriskPyramidString(19, "Right");
         }
 
         private void ButtonDown_Click(object sender, RoutedEventArgs e)
@@ -53,7 +54,11 @@ namespace CSharp.WPFTasksDemo
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+        }
 
+        private void ButtonOk_Click(object sender, RoutedEventArgs e)
+        {
+            PyramidTextArea.Visibility = Visibility.Visible ;
         }
     }
 }

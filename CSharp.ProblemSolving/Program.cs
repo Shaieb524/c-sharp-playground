@@ -1,3 +1,3 @@
-﻿using CSharp.ProblemSolving.Helpers.TaksNo1;
+﻿using CSharp.ProblemSolving.Tasks.TaksNo1;
 
 MainConsole.DisplayMainConsole();
