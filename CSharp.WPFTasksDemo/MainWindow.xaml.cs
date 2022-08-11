@@ -30,7 +30,7 @@ namespace CSharp.WPFTasksDemo
         private void ButtonLeft_Click(object sender, RoutedEventArgs e)
         {
             DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.TextAlignment = TextAlignment.Right;
+            PyramidTextArea.TextAlignment = TextAlignment.Center;
             PyramidTextArea.Text = dh.GetAstriskPyramidString(Int32.Parse(PyramidLength.Text), "Left");
 
         }
@@ -45,7 +45,7 @@ namespace CSharp.WPFTasksDemo
         private void ButtonRight_Click(object sender, RoutedEventArgs e)
         {
             DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.TextAlignment = TextAlignment.Left;
+            PyramidTextArea.TextAlignment = TextAlignment.Right;
             PyramidTextArea.Text = dh.GetAstriskPyramidString(Int32.Parse(PyramidLength.Text), "Right");
         }
 
