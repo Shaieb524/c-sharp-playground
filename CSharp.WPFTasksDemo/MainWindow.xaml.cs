@@ -30,26 +30,30 @@ namespace CSharp.WPFTasksDemo
         private void ButtonLeft_Click(object sender, RoutedEventArgs e)
         {
             DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.Text = dh.GetAstriskPyramidString(19, "Left");
+            PyramidTextArea.TextAlignment = TextAlignment.Right;
+            PyramidTextArea.Text = dh.GetAstriskPyramidString(Int32.Parse(PyramidLength.Text), "Left");
 
         }
 
         private void ButtonUp_Click(object sender, RoutedEventArgs e)
         {
             DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.Text = dh.GetAstriskPyramidString(9, "Up");
+            PyramidTextArea.TextAlignment = TextAlignment.Center;
+            PyramidTextArea.Text = dh.GetAstriskPyramidString(Int32.Parse(PyramidLength.Text), "Up");
         }
 
         private void ButtonRight_Click(object sender, RoutedEventArgs e)
         {
             DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.Text = dh.GetAstriskPyramidString(19, "Right");
+            PyramidTextArea.TextAlignment = TextAlignment.Left;
+            PyramidTextArea.Text = dh.GetAstriskPyramidString(Int32.Parse(PyramidLength.Text), "Right");
         }
 
         private void ButtonDown_Click(object sender, RoutedEventArgs e)
         {
             DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.Text = dh.GetAstriskPyramidString(9, "Down");
+            PyramidTextArea.TextAlignment = TextAlignment.Center;
+            PyramidTextArea.Text = dh.GetAstriskPyramidString(Int32.Parse(PyramidLength.Text), "Down");
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

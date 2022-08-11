@@ -97,20 +97,22 @@ namespace CSharp.ProblemSolving.Tasks.TaksNo1
                             else
                             {
                                 spcaceCounter++;
-                                pyramidChars += new String(' ', spcaceCounter) + new string('*', BaseNo - i) + "\n";
+                                pyramidChars += new string(' ', spcaceCounter) + new string('*', BaseNo - i) + "\n";
                             }
                         }
                         return pyramidChars;
 
                     case "Up":
                     case "2":
-
                         for (int i = 0; i <= BaseNo; i++)
                         {
-                            int numOfSpaces = (BaseNo - i) / 2;
+                            int numOfSpaces = (BaseNo - i) / 2 ;
                             // numOfAstrisks = i
                             if (i % 2 != 0)
-                                pyramidChars += new string(' ', numOfSpaces) + new string('*', i) + "\n";
+                            {
+                                pyramidChars += new string('*', i) + "\n";
+
+                            }
                         }
                         return pyramidChars;
 
@@ -134,7 +136,7 @@ namespace CSharp.ProblemSolving.Tasks.TaksNo1
                             int numOfSpaces = i / 2;
                             int numOfAstrisks = BaseNo - i;
                             if (numOfAstrisks % 2 != 0)
-                                pyramidChars += new string(' ', numOfSpaces) + new string('*', numOfAstrisks) + "\n";
+                                pyramidChars += new string('*', numOfAstrisks) + "\n";
                         }
                         return pyramidChars;
 

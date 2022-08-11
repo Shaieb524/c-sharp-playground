@@ -13,11 +13,17 @@
             RenderTransformOrigin="0.5,0.5"
             Margin="400,72,29,67"
             Name="PyramidTextArea"
-            TextAlignment="Center"
+            TextAlignment="Left"
             TextChanged="TextBox_TextChanged" >
             
         </TextBox>
 
+        <Label Margin="444,28,191,374" RenderTransformOrigin="1.248,1.187">
+            Pyramid's base length : 
+        </Label>
+
+        <TextBox Margin="624,30,50,362" Background="White" Name="PyramidLength" ></TextBox>
+        
         <Button Margin="166,174,577,214" Click="ButtonOk_Click" RenderTransformOrigin="-1.035,0.378">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Foreground="Blue" FontWeight="Bold" Margin="2,0">Ok</TextBlock>
