@@ -35,6 +35,7 @@
 
             return -1;
         }
+
         public int BinarySearchRecursive(int[] arr, int key, int leftIndex, int rightIndex)
         {
 
