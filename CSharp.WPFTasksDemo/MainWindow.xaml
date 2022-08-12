@@ -13,7 +13,6 @@
             RenderTransformOrigin="0.5,0.5"
             Margin="400,72,29,67"
             Name="PyramidTextArea"
-            TextAlignment="Left"
             TextChanged="TextBox_TextChanged" >
             
         </TextBox>

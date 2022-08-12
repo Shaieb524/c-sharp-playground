@@ -93,11 +93,11 @@ namespace CSharp.ProblemSolving.Tasks.TaksNo1
                         for (int i = 0; i < BaseNo + 1; i++)
                         {
                             if (i <= BaseNo / 2)
-                                pyramidChars += new string(' ', BaseNo / 2-i) + new string('*', i + 1) + "\n";
+                                pyramidChars += new string('*', i + 1) + "\n";
                             else
                             {
                                 spcaceCounter++;
-                                pyramidChars += new string(' ', spcaceCounter) + new string('*', BaseNo - i) + "\n";
+                                pyramidChars += new string('*', BaseNo - i) + "\n";
                             }
                         }
                         return pyramidChars;

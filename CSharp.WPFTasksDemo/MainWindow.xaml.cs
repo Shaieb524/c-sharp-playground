@@ -30,7 +30,8 @@ namespace CSharp.WPFTasksDemo
         private void ButtonLeft_Click(object sender, RoutedEventArgs e)
         {
             DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.TextAlignment = TextAlignment.Center;
+            //PyramidTextArea.TextAlignment = TextAlignment.Center;
+            PyramidTextArea.TextAlignment = TextAlignment.Left;
             PyramidTextArea.Text = dh.GetAstriskPyramidString(Int32.Parse(PyramidLength.Text), "Left");
 
         }
