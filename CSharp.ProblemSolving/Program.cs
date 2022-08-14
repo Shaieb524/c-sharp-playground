@@ -1,29 +1,15 @@
-﻿using CSharp.ProblemSolving.Tasks.TaskNo2.Models;
+﻿using CSharp.ProblemSolving.Tasks.TaskNo2.Abstraction.Interfaces;
 
-var emp = new Employee("joud", "jlt", "dubai", 123);
-var t = emp.DoWork(); 
+Document doc1 = new Document();
 
-var emp2 = new Employee("fadi", "jlt", "dubai", 123, 7000);
-var t2 = emp.DoWork();
+// we cant create instance of an interface, but we can assign it to a var that imeplents that interface
+Storable printableDoc = doc1;
 
-Manager man = new Manager("Tony", "kassa", "damas", 111);
-var tt = man.DoWork("msg");
-Console.WriteLine(tt);
+// we can cast the var to a type to use methods from the type that implement the interface
+Document doc2 = printableDoc as Document;
+if (doc2 != null)
+    Console.WriteLine(doc2.Status());
 
-Employee mm = new Manager("Maze", "bab tuma", "damas", 222);
-var ttt = mm.DoWork();
 
-List<Employee> emps = new List<Employee>();
-
-emps.Add(emp);
-emps.Add(emp2);
-emps.Add(man);
-emps.Add(mm);
-
-foreach (var item in emps)
-{
-    
-    Console.WriteLine(item.ToString());
-    Console.WriteLine(item.DoWork("msg"));
-}
+Console.WriteLine(printableDoc.Write());
 
