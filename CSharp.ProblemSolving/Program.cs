@@ -1,15 +1,19 @@
-﻿using CSharp.ProblemSolving.Tasks.TaskNo2.Abstraction.Interfaces;
+﻿using CSharp.ProblemSolving.Tasks.TaskNo2.Delegates;
 
-Document doc1 = new Document();
+Document doc = new Document();
 
-// we cant create instance of an interface, but we can assign it to a var that imeplents that interface
-Storable printableDoc = doc1;
+PostBlog blogPoster = new PostBlog();
 
-// we can cast the var to a type to use methods from the type that implement the interface
-Document doc2 = printableDoc as Document;
-if (doc2 != null)
-    Console.WriteLine(doc2.Status());
+// instantiate delegate from document
+var blogDelegate = new Document.SendDoc(blogPoster.DeliverPost);
+doc.DocumentSender(blogDelegate);
 
+// or pass it directly
+doc.DocumentSender(blogPoster.DeliverPost);
 
-Console.WriteLine(printableDoc.Write());
+EmailSender emailSender = new EmailSender();
+var emailDelegate = new Document.SendDoc(emailSender.SendEmail);
+doc.DocumentSender(emailDelegate);
+doc.DocumentSender(emailSender.SendEmail);
+
 

@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Tasks\TaskNo2\Abstraction\Interfaces\pExample.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Tasks\TaskNo2\Abstraction\Interfaces\pExample.txt" />
+  </ItemGroup>
+
 </Project>
