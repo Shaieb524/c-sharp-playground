@@ -15,4 +15,8 @@
     <Compile Include="Tasks\TaskNo2\Abstraction\Interfaces\pExample.txt" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Tasks\TaskNo2\Events\Clock\" />
+  </ItemGroup>
+
 </Project>

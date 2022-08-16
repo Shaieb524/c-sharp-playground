@@ -14,7 +14,7 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Events.BankAccount
         public int Balance { get; set; }
 
         // define an event that depends on the delegate
-        // this event invokes delegates when it is raised
+        // this event invokes delegates when it is raised and subscribed to
         public event TransactionHandler TransactionMade;
 
         public Account(int balance)
