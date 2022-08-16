@@ -1,3 +1,3 @@
-﻿using CSharp.ProblemSolving.Tasks.TaskNo2.Events.BankAccount;
+﻿using CSharp.ProblemSolving.Tasks.TaskNo2.Events.VideoEncoder;
 
-TestEvent.Main();
+CustomConsole.Main();
