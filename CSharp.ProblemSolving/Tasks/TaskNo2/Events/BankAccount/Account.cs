@@ -13,7 +13,7 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Events.BankAccount
     {
         public int Balance { get; set; }
 
-        // define an event that depends on the delegate
+        // define an event that depends on the delegate (a delegate instance)
         // this event invokes delegates when it is raised and subscribed to
         public event TransactionHandler TransactionMade;
 
@@ -42,6 +42,7 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Events.BankAccount
 
         protected virtual void OnTransactionMade(TransactionEventArgs e)
         {
+            // check if anyone has subscribed to the delegate
             if (TransactionMade != null)
             {
                 TransactionMade(this, e); // Raise the event (should be handled by subscribers)

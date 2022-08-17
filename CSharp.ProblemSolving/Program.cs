@@ -1,3 +1,3 @@
-﻿using CSharp.ProblemSolving.Tasks.TaskNo2.Events.VideoEncoder;
+﻿using CSharp.ProblemSolving.Tasks.TaskNo2.Events.Clock;
 
 CustomConsole.Main();
