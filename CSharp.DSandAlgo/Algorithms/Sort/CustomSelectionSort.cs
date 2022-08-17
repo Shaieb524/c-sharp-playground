@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharp.DSandAlgo.Algorithms.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace CSharp.DSandAlgo.Algorithms.Sort
             for (int i=0; i<arr.Count; i++)
             {
                 // extract min item from remaining list
-                var currMin = GetMinIntFromList(clonedArr);
+                var currMin = GeneralHelper.GetMinIntFromList(clonedArr);
 
                 // remove item from list
                 int removeItemIndex = clonedArr.IndexOf(currMin);
@@ -33,20 +34,6 @@ namespace CSharp.DSandAlgo.Algorithms.Sort
             return sortedArr;
         }
 
-        // extract min item from given list
-        public static int GetMinIntFromList(List<int> arr)
-        {
-            int min = 0;
 
-            // make first item min then compare and swap
-            for (int i = 0; i < arr.Count; i++)
-            {
-                if (i == 0) min = arr[i];
-
-                if (arr[i] < min) min = arr[i];
-            }
-
-            return min;
-        }
     }
 }
