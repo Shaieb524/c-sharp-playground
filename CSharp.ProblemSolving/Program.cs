@@ -1,3 +1,3 @@
-﻿using CSharp.ProblemSolving.Tasks.TaskNo2.Events.Clock;
+﻿using CSharp.ProblemSolving.Tasks.TaskNo2.async_await;
 
-CustomConsole.Main();
+ MainConsole.Main();
