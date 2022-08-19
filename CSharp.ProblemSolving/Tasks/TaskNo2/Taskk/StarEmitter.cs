@@ -8,10 +8,26 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
         public event EmittedStarHandler StarEmitted;
 
         public int TimeInterval { get; set; }
+        public int LineLength { get; set; }
+
+        public StarEmitter(int lineLength, int timeInterval)
+        {
+            LineLength = lineLength;
+            TimeInterval = timeInterval;
+        }
+
+        public void DrawVerticalLine()
+        {
+            Console.WriteLine("Line 1 : ");
+            for (int i = 0; i < LineLength; i++)
+            {
+                Console.WriteLine("*");
+            }
+        }
 
         public async Task EmitStars()
         {
-            var periodicTimer = new PeriodicTimer(TimeSpan.FromSeconds(3));
+            var periodicTimer = new PeriodicTimer(TimeSpan.FromSeconds(TimeInterval));
 
             Console.WriteLine("Line 2 : ");
 
@@ -32,5 +48,7 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
                 }
             }
         }
+
+
     }
 }

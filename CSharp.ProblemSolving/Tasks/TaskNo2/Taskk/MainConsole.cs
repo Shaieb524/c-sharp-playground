@@ -6,9 +6,10 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
     {
         public static void Main()
         {
-            Helper.DrawVerticalLine(5);
 
-            StarEmitter emitter = new StarEmitter();
+            StarEmitter emitter = new StarEmitter(5, 3);
+            emitter.DrawVerticalLine();
+
             ConsoleDrawer cD = new ConsoleDrawer();
 
             cD.Subscribe(emitter);
