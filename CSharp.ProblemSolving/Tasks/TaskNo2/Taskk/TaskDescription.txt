@@ -1,0 +1,2 @@
+﻿Draw a vertical line of stars and 
+delete each start and draw it in another column each interval time passed
