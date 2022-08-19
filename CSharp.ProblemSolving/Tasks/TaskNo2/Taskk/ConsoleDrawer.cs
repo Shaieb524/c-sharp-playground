@@ -15,6 +15,12 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
             emitter.StarEmitted += new StarEmitter.EmittedStarHandler(DrawAStar);
         }
 
+        public string SubscribeWPF(StarEmitter emitter)
+        {
+            emitter.StarEmittedWPF += new StarEmitter.EmittedStarWPFHandler(DrawAStarString);
+            return "*";
+        }
+
         public void DrawAStar(object sender, CustomEventArgs e)
         {
             Console.WriteLine("*  {0}:{1}:{2}",
@@ -24,6 +30,12 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
                 );
 
             ClearCurrentConsoleLine(ColumnLength); 
+        }
+
+        public string DrawAStarString(object sender, EventArgs e)
+        {
+            string line = "* ";
+            return line;
         }
 
         public static void ClearCurrentConsoleLine(int columnLenth)

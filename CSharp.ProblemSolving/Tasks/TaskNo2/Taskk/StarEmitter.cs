@@ -5,7 +5,11 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
     {
         public delegate void EmittedStarHandler(object sender, CustomEventArgs e);
 
+        public delegate string EmittedStarWPFHandler(object sender, EventArgs e);
+
         public event EmittedStarHandler StarEmitted;
+
+        public event EmittedStarWPFHandler StarEmittedWPF;
 
         public int ColumnLength { get; set; }
 
@@ -24,6 +28,16 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
             {
                 Console.WriteLine("*");
             }
+        }
+
+        public string DrawVerticalLineString()
+        {
+            string result = "Line 1 : \n";
+            for (int i = 0; i < ColumnLength; i++)
+            {
+                result += "* \n";
+            }
+            return result;
         }
 
         public async Task EmitStars()
@@ -46,6 +60,11 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
                 if (StarEmitted != null)
                 {
                     StarEmitted(this, e);
+                }
+
+                if (StarEmittedWPF != null)
+                {
+                    StarEmittedWPF(this, e);
                 }
 
                 counter++;

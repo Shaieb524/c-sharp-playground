@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CSharp.ProblemSolving.Tasks.TaksNo1;
+using CSharp.ProblemSolving.Tasks.TaskNo2.Taskk;
 
 namespace CSharp.WPFTasksDemo
 {
@@ -24,46 +24,48 @@ namespace CSharp.WPFTasksDemo
         public MainWindow()
         {
             InitializeComponent();
-            PyramidTextArea.Visibility = Visibility.Collapsed;
         }
 
-        private void ButtonLeft_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DisplayHelper dh = new DisplayHelper();
-            //PyramidTextArea.TextAlignment = TextAlignment.Center;
-            PyramidTextArea.TextAlignment = TextAlignment.Left;
-            PyramidTextArea.Text = dh.GetAstriskPyramidString(Int32.Parse(PyramidLength.Text), "Left");
+            StarEmitter emitter = new StarEmitter(6, 3);
+            emitter.DrawVerticalLine();
+            TextBox2.Text = emitter.DrawVerticalLineString();
+
+            //ConsoleDrawer cD = new ConsoleDrawer(6);
+            //var xx = cD.SubscribeWPF(emitter);
+            //TextBox1.Text = xx;
+
+            //emitter.EmitStars();
+
+            var LinesUi = new LinesUI();
+            LinesUi.TextBox1Text = "Start Text";
+            TextBox1.Text = LinesUi.TextBox1Text;
+
+            //System.Threading.Thread.Sleep(3000);
+            //LinesUi.TextBox1Text = "Updated Text";
+            //var xx = cD.DrawAStarString(sender, e);
+
+            //TextBox1.Text = xx;
 
         }
 
-        private void ButtonUp_Click(object sender, RoutedEventArgs e)
+        public void UpdateTextBox(object sender, EventArgs e)
         {
-            DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.TextAlignment = TextAlignment.Center;
-            PyramidTextArea.Text = dh.GetAstriskPyramidString(Int32.Parse(PyramidLength.Text), "Up");
+            var currentTime = DateTime.Now;
+
+            TextBox1.Text = "* " + 
+                currentTime.Hour.ToString() +
+                currentTime.Minute.ToString() +
+                currentTime.Second.ToString() ;
+
         }
 
-        private void ButtonRight_Click(object sender, RoutedEventArgs e)
-        {
-            DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.TextAlignment = TextAlignment.Right;
-            PyramidTextArea.Text = dh.GetAstriskPyramidString(Int32.Parse(PyramidLength.Text), "Right");
-        }
-
-        private void ButtonDown_Click(object sender, RoutedEventArgs e)
-        {
-            DisplayHelper dh = new DisplayHelper();
-            PyramidTextArea.TextAlignment = TextAlignment.Center;
-            PyramidTextArea.Text = dh.GetAstriskPyramidString(Int32.Parse(PyramidLength.Text), "Down");
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void TextBox_TextChanged1(object sender, TextChangedEventArgs e)
         {
         }
-
-        private void ButtonOk_Click(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged2(object sender, TextChangedEventArgs e)
         {
-            PyramidTextArea.Visibility = Visibility.Visible ;
         }
     }
 }
