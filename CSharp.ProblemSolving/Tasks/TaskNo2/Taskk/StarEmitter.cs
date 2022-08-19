@@ -7,19 +7,20 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
 
         public event EmittedStarHandler StarEmitted;
 
-        public int TimeInterval { get; set; }
-        public int LineLength { get; set; }
+        public int ColumnLength { get; set; }
 
-        public StarEmitter(int lineLength, int timeInterval)
+        public int TimeInterval { get; set; }
+
+        public StarEmitter(int columnLength, int timeInterval)
         {
-            LineLength = lineLength;
+            ColumnLength = columnLength;
             TimeInterval = timeInterval;
         }
 
         public void DrawVerticalLine()
         {
             Console.WriteLine("Line 1 : ");
-            for (int i = 0; i < LineLength; i++)
+            for (int i = 0; i < ColumnLength; i++)
             {
                 Console.WriteLine("*");
             }
@@ -28,10 +29,10 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
         public async Task EmitStars()
         {
             var periodicTimer = new PeriodicTimer(TimeSpan.FromSeconds(TimeInterval));
-
+            var counter = 0;
             Console.WriteLine("Line 2 : ");
 
-            while (await periodicTimer.WaitForNextTickAsync())
+            while (await periodicTimer.WaitForNextTickAsync() && counter < ColumnLength)
             {
                 var currentTime = DateTime.Now;
 
@@ -46,9 +47,11 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
                 {
                     StarEmitted(this, e);
                 }
+
+                counter++;
             }
+
+            Console.WriteLine("End..");
         }
-
-
     }
 }

@@ -6,16 +6,13 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
     {
         public static void Main()
         {
-
-            StarEmitter emitter = new StarEmitter(5, 3);
+            StarEmitter emitter = new StarEmitter(6, 3);
             emitter.DrawVerticalLine();
 
-            ConsoleDrawer cD = new ConsoleDrawer();
+            ConsoleDrawer cD = new ConsoleDrawer(6);
 
             cD.Subscribe(emitter);
             emitter.EmitStars().GetAwaiter().GetResult();
-
         }
-
     }
 }

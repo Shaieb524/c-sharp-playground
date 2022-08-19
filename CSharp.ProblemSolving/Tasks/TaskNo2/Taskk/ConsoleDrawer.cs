@@ -3,6 +3,13 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
 {
     public class ConsoleDrawer
     {
+        public int ColumnLength { get; set; }
+
+        public ConsoleDrawer(int columnLenth)
+        {
+            ColumnLength = columnLenth;
+        }
+
         public void Subscribe(StarEmitter emitter)
         {
             emitter.StarEmitted += new StarEmitter.EmittedStarHandler(DrawAStar);
@@ -15,6 +22,16 @@ namespace CSharp.ProblemSolving.Tasks.TaskNo2.Taskk
                 e.Minute.ToString(),
                 e.Second.ToString()
                 );
+
+            ClearCurrentConsoleLine(ColumnLength); 
+        }
+
+        public static void ClearCurrentConsoleLine(int columnLenth)
+        {
+            int currentLineCursor = Console.CursorTop;
+            Console.SetCursorPosition(0, Console.CursorTop-(columnLenth + 2));
+            Console.Write(new string(' ', Console.WindowWidth));
+            Console.SetCursorPosition(0, currentLineCursor);
         }
     }
 }
