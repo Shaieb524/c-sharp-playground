@@ -6,52 +6,29 @@
         xmlns:local="clr-namespace:CSharp.WPFTasksDemo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="SkyBlue">
+    <Grid Background="SkyBlue" RenderTransformOrigin="0.736,0.485">
+
         <TextBox 
             AcceptsReturn="True"
             TextWrapping="Wrap"
             RenderTransformOrigin="0.5,0.5"
-            Margin="400,72,29,67"
-            Name="PyramidTextArea"
-            TextChanged="TextBox_TextChanged" >
-            
+            Margin="575,72,29,67"
+            Name="TextBox1"
+            TextChanged="TextBox_TextChanged1" Text="" >
+
         </TextBox>
+        <TextBox 
+            AcceptsReturn="True"
+            TextWrapping="Wrap"
+            RenderTransformOrigin="0.5,0.5"
+            Margin="302,72,302,67"
+            Name="TextBox2"
+            TextChanged="TextBox_TextChanged2" Text="" />
 
-        <Label Margin="444,28,191,374" RenderTransformOrigin="1.248,1.187">
-            Pyramid's base length : 
-        </Label>
-
-        <TextBox Margin="624,30,50,362" Background="White" Name="PyramidLength" ></TextBox>
-        
-        <Button Margin="166,174,577,214" Click="ButtonOk_Click" RenderTransformOrigin="-1.035,0.378">
+        <Button Margin="166,174,577,214" Click="Button_Click" RenderTransformOrigin="-1.035,0.378">
             <StackPanel Orientation="Horizontal">
                 <TextBlock Foreground="Blue" FontWeight="Bold" Margin="2,0">Ok</TextBlock>
             </StackPanel>
         </Button>
-        
-        <Button Margin="242,176,501,213" Click="ButtonRight_Click">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Foreground="Blue" FontWeight="Bold" Margin="2,0">Right</TextBlock>
-            </StackPanel>
-        </Button>
-
-        <Button Margin="161,119,577,276" Click="ButtonUp_Click" RenderTransformOrigin="0.857,0.587">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Foreground="Blue" FontWeight="Bold" Margin="2,0">Up</TextBlock>
-            </StackPanel>
-        </Button>
-
-        <Button Margin="71,176,661,213" Click="ButtonLeft_Click">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Foreground="Blue" FontWeight="Bold" Margin="2,0">Left</TextBlock>
-            </StackPanel>
-        </Button>
-
-        <Button Margin="161,235,577,168" Click="ButtonDown_Click" RenderTransformOrigin="0.491,-0.263">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Foreground="Blue" FontWeight="Bold" Margin="2,0" RenderTransformOrigin="0.86,-2.46">Down</TextBlock>
-            </StackPanel>
-        </Button>
-
     </Grid>
 </Window>
