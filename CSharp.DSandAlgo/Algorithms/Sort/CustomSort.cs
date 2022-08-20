@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.DSandAlgo.Algorithms.Sort
 {
-    public class CustomSelectionSort
+    public class CustomSort
     {
         // this custom sorting algorithm if of O(n^2) without swapping
         // because any order (even if sorted) the algo look for min in remaning elements
@@ -34,6 +34,21 @@ namespace CSharp.DSandAlgo.Algorithms.Sort
             return sortedArr;
         }
 
-
+        public static List<int> CustomBubleSort(List<int> arr)
+        {
+            for (int i = 0; i < arr.Count - 1; i++)
+            {
+                for (int j = 0; j < arr.Count - 1; j++)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+                        int temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
     }
 }

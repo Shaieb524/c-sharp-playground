@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.DSandAlgo.Algorithms.Sort
 {
-    public class Sort
+    public class SortLibrary
     {
         public static void SelectionSort(int[] A, int n)
         {
@@ -50,6 +50,24 @@ namespace CSharp.DSandAlgo.Algorithms.Sort
             }
 
             return arr;
+        }
+
+        public static int[] BubbleSort(int[] A, int n)
+        {
+            for (int pass = n - 1; pass >= 0; pass--)
+            {
+                for (int i = 0; i < pass; i++)
+                {
+                    if (A[i] > A[i + 1])
+                    {
+                        int temp = A[i];
+                        A[i] = A[i + 1];
+                        A[i + 1] = temp;
+                    }
+                }
+            }
+
+            return A;
         }
     }
 }
